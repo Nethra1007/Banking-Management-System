@@ -15,7 +15,7 @@ def call_api(method, path, payload=None, params=None, headers=None):
     """Calls the Java API and returns (ok, data). Never raises."""
     try:
         resp = requests.request(method, API + path, json=payload, params=params,
-                                headers=headers, timeout=5)
+                                headers=headers, timeout=60)
         data = resp.json()
     except requests.exceptions.ConnectionError:
         return False, {"error": "Cannot reach the backend. Is it running on port 8080?"}
