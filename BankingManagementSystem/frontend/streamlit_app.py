@@ -14,7 +14,7 @@ st.set_page_config(page_title="Banking Management System", page_icon="🏦", lay
 def call_api(method, path, payload=None, params=None, headers=None):
     """Calls the Java API and returns (ok, data). Never raises."""
     try:
-        resp = requests.request(method, API + path, json=payload, params=params,
+        resp = requests.request(method, API_BASE + path, json=payload, params=params,
                                 headers=headers, timeout=60)
         data = resp.json()
     except requests.exceptions.ConnectionError:
