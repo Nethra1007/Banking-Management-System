@@ -5,7 +5,7 @@ import pandas as pd
 import requests
 import streamlit as st
 
-API = "http://localhost:8080/api"
+API_BASE = "https://banking-management-system-c2pn.onrender.com/api"
 
 st.set_page_config(page_title="Banking Management System", page_icon="🏦", layout="wide")
 
