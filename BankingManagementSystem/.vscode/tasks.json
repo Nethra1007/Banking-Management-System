@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Backend (Java API)",
+      "type": "shell",
+      "command": "sh run_backend.sh",
+      "windows": { "command": "run_backend.bat" },
+      "options": { "cwd": "${workspaceFolder}/backend" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Frontend (Streamlit)",
+      "type": "shell",
+      "command": "sh run_frontend.sh",
+      "windows": { "command": "run_frontend.bat" },
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Full App",
+      "dependsOn": ["Start Backend (Java API)", "Start Frontend (Streamlit)"],
+      "problemMatcher": []
+    }
+  ]
+}
