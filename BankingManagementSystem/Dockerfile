@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Copy the backend source code from your local folder to the container
-COPY backend/src /app/src
+COPY BankingManagementSystem/backend/src /app/src
 
 # Compile the Java code
 RUN mkdir out
